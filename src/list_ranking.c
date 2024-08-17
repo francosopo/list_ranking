@@ -74,9 +74,13 @@ int get_max_subarray(Value32 *arr, uint64_t start, uint64_t end, cmp_func cmp, s
     return 0;
 }
 
-int get_max(Value32 *arr, Value32 *resp)
+int get_max(Value32 *arr, Value32 *resp, uint64_t arr_size)
 {
-
+    uint64_t scope = (arr_size + N_THREADS) / N_THREADS;
+    for (uint64_t i = 0; i < N_THREADS; i++)
+    {
+        
+    }
 }
 int main(){
     Value32 *resp;
